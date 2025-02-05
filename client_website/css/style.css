@@ -1,0 +1,928 @@
+@font-face {
+    font-family: 'Custom-dotted-font'; /* Choose a name for your font */
+    src: url('../assets/jardotty-font/Jardotty-R946.ttf') format('truetype'); /* Path to your font */
+    font-weight: normal; /* Optional: specify font weight */
+    font-style: normal;  /* Optional: specify font style */
+}
+@font-face {
+    font-family: "gill-sans-bold";
+    src: url('../assets/gill-sans-2/Gill-Sans-Bold.otf') format('opentype'); /* Path to your font */
+    font-weight: normal; /* Optional: specify font weight */
+    font-style: normal;  /* Optional: specify font style */
+}
+@font-face {
+    font-family: "gill-sans-light";
+    src: url('../assets/gill-sans-2/Gill-Sans-Light.otf') format('opentype'); /* Path to your font */
+    font-weight: normal; /* Optional: specify font weight */
+    font-style: normal;  /* Optional: specify font style */
+}
+
+
+
+/********
+
+GENERAL STYLES
+
+*********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders do not affect element's total width/height */
+}
+
+
+
+/********
+
+remove default margin and padding 
+
+*********/
+html, body {
+    max-height: 1200px; /* Set the maximum height for the body */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent box model */
+    font-family: "gill-sans-bold";
+    line-height: 1.6; /* Line height for better readability */
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh; /* Ensure full height on smaller screens */
+    background-image: url('../images/logo-photos/background-for-page.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+
+
+/********
+
+BANNER CSS 
+
+*********/
+
+.banner {
+    background-color: rgb(245,245,245); /* Dark gray background */
+    margin: 0px;
+    padding: 0px;
+    width: 100%; /* Full-width banner */
+    height: 20vh; /* Full height */
+    min-height: 170px; /* Minimum height */
+    max-height: 170px;
+}
+.banner-container {
+    position: relative; /* Set the parent container to relative */
+    height: 100%; /* Ensure it takes up the full height of the banner */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and buttons */
+    padding: 0 20px; /* Add padding on the sides */
+    z-index: 5; /* Ensure it's above the background image */
+}
+
+/* Donate Now button styling */
+.banner-container .btn {
+    position: absolute;
+    right: 80px; /* Adjust the position of the button */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure proper centering */
+    font-size: 18px;
+    color: white;
+    background-color: rgb(195,41,58);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1;
+}
+
+/* Burger menu styling */
+.burger {
+    position: absolute;
+    right: 250px; /* Position burger menu to the right of the container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust centering */
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.burger-menu-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the burger */
+    left: auto; /* Reset left if necessary */
+    right: 0; /* Align with the right edge of the .burger */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+/* Links inside the dropdown */
+.burger-menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.burger-menu-content a:hover {background-color: #f1f1f1}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.burger:hover .burger {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    .burger-menu-content a {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+/********
+
+NAV BAR CSS
+
+*********/
+/* Base styles for the navbar */
+nav {
+    display: flex; /* Arrange items horizontally */
+    justify-content: space-between; /* Distribute items across full width */
+    background-color: rgb(255,186,95);  /* Dark background color */
+    max-width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto; /* Center the navbar */
+    font-size: 20px; /* Font size for links */
+}
+
+nav a {
+    color: rgb(0, 0, 0); /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding inside each box */
+    background-color: rgb(255,186,95);/* Box background color (dark gray) */
+    margin: 3px; /* Space between links */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    white-space: nowrap; /* Prevent text wrapping */
+    flex-grow: 1; /* Make each link take equal space */
+    text-align: center; /* Center the text within each box */
+}
+
+nav a:hover {
+    background-color: rgb(169, 138, 100); /* Lighter gray on hover */
+}
+
+.orangebar {
+    display: none;
+    background-color: rgb(255, 186, 95); /* Set the background color to orange */
+    width: 100%; /* Full width of the screen */
+    height: 15px; /* Adjust the height of the bar */
+    position: relative; /* Ensure it stays at the top */
+    top: 0;
+    left: 0;
+    z-index: 0; /* Make sure it's above other elements */
+}
+
+
+@media (max-width: 1000px) {
+    .hero h1 {
+        font-size: 24px; /* Adjust font size */
+        left: 10%;
+    }
+    nav {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+    .orangebar {
+        display: flex;
+    }
+    img[src='images/logo-photos/clear-background-dtf-logo.png'] {
+        width: 400px;
+        height: auto; /* Keep aspect ratio */
+    }
+    
+    img[src='../images/logo-photos/clear-background-dtf-logo.png'] {
+        width: 400px;
+        height: auto; /* Keep aspect ratio */
+    }
+}
+
+@media (max-width: 700px) {
+    img[src='images/logo-photos/clear-background-dtf-logo.png'] {
+        width: 300px; /* Adjust width of this specific image */
+        height: auto; /* Keep aspect ratio */
+    }
+    img[src='../images/logo-photos/clear-background-dtf-logo.png'] {
+        width: 300px; /* Adjust width of this specific image */
+        height: auto; /* Keep aspect ratio */
+    }
+    .cta-banner .apply-donateCTA,
+    .cta-banner .principlesCTA,
+    .cta-banner .fundingCTA {
+        font-size: 16px; /* Adjust font size at 700px max width */
+        padding: 10px;
+    }
+    .cta-banner .apply-donateCTA {
+        width: 100%; /* Make button full width */
+    }
+    .cta-banner .principlesCTA {
+        width: 100%; /* Make button full width */
+    }
+    .cta-banner .fundingCTA {
+        width: 100%; /* Make button full width */
+    }
+
+}
+
+@media (max-width: 600px) {
+    .burger-menu-content {
+        display: none;
+        position: flex;
+        top: 100%; /* Position below the burger */
+        left: 50%; /* Reset left if necessary */
+        z-index: 9999;
+    }
+    .banner-container .btn {
+        z-index: 0;
+    }
+    .banner-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center the items horizontally */
+        text-align: center; /* Ensure text is centered */
+    }
+    .burger {
+        margin-top: 40px;
+        left: 15%; /* Center the burger menu */
+        z-index: 10000;
+
+    }
+    .banner-container .btn {
+        margin-top: 40px; /* Add space between the image and the button */
+        margin-left: 80px;
+        right: 20%;
+    }
+}
+
+
+
+/********
+
+HERO SECTION CSS
+
+*********/
+.hero {
+    position: relative; /* Allow absolute positioning of the h1 inside this div */
+    z-index: 1;
+    background-color: rgb(207, 169, 124);
+    
+    text-align: center;
+    height: 700px;
+}
+@media (max-width: 1375px) {
+    .hero {
+        left: auto;  /* Resets left */
+        width: auto; /* Resets width */
+    }
+}
+
+.hero img {
+    width: 100%; /* Make sure the image spans the full width */
+    height: 500px; /* Set a fixed height for the image */
+    object-fit: cover;
+    display: block; /* Prevent space below image */
+    object-position: center 30%;
+}
+
+.hero h1 {
+    position: absolute; /* Position the text over the image */
+    top: 85%; /* Center vertically */
+    left: 50%;
+    width: 100%; /* Make sure the text spans the full width */
+    height: 150px;
+    transform: translate(-50%, -50%); /* Adjust positioning to ensure it's centered exactly */
+    font-size: 20px; /* Adjust font size */
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 20px; /* Add padding around the text */
+    border-radius: 10px;
+}
+
+@media (max-width: 950px) {
+    .hero {
+        height: 500px; /* Adjust height for smaller screens */
+    }
+    .hero img {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+    .hero h1 {
+        top: 80%; /* Adjust vertical position */
+    }
+
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero h1 {
+        height: 200px;
+        width: 100%;
+        top: 85%;
+        left: 50%;
+        font-size: 13px;
+    }
+}
+
+
+
+/********
+
+eye-catcher CSS
+
+*********/
+.decorative-banner {
+    position: relative; /* Needed for positioning its children */
+    height: 200px;
+    width: 100%; /* Ensure the container is full width */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: space-between; /* Space between the image and button */
+}
+
+.image-container {
+    position: relative; /* Needed to control positioning of the image */
+    width: 100%;
+    height: 80%;
+}
+
+.image-container img {
+    width: 100%; /* Make the image cover the container */
+    height: 100%; /* Ensure image takes full height of the container */
+    filter: grayscale(60%); /* Slightly grey out the image to reduce emphasis */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transition: filter 0.3s ease; /* Smooth transition for the greyscale effect */
+    margin: 0;
+}
+
+.button-container {
+    position: absolute; /* Position the button container */
+    top: 30%;
+    width: 100%; /* Ensure the button container spans full width */
+    display: flex;
+    color: #ffffff;
+    justify-content: center; /* Center the button horizontally */
+    z-index: 2; /* Ensure it appears above the image */
+    text-align: center;
+}
+.button-container h1 {
+    margin-right:10%;
+    -webkit-text-stroke: 1px #FFBA5F;
+}
+
+.donate-btn {
+    background-color: rgb(195,41,58); /* Button color */
+    color: white; /* Text color */
+    padding: 15px 30px; /* Button size */
+    font-size: 16px; /* Font size */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    z-index: 3; /* Ensure the button is above the container */
+}
+
+.donate-btn:hover {
+    background-color: rgb(195,41,58); /* Slightly darker color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* For smaller screens, adjust the button position to the left */
+@media (max-width: 1100px) {
+    .button-container {
+        top: 30%;
+        justify-content: flex-start; /* Position the button on the left side */
+        right: 10%;
+    }
+    .button-container h1{
+        margin-bottom: 10px;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    .donate-btn {
+        padding: 10px 10px; /* Adjust button size */
+        max-height: 50px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .button-container h1 {
+        font-size: 20px;
+        margin-left: 30%;
+        margin-right: 10px;
+    }
+    .donate-btn {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .button-container {
+        top: 20%;
+    }
+}
+
+@media (max-width: 450px) {
+    .button-container {
+        top: 18%;
+    }
+    .donate-btn {
+        padding: 10px 10px; /* Adjust button size */
+        width: 100px;
+        height: 60px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 350px) {
+    .button-container {
+        top: 30%;
+    }
+    .button-container h1 {
+        font-size: 18px;
+    }
+    .donate-btn {
+        padding: 5px 5px; /* Adjust button size */
+        width: 100px;
+        height: 50px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+/********
+
+CTA BANNER CSS
+
+*********/
+
+.cta-banner {
+    background-color: rgb(255,186,95); /* Dark background for the CTA section */
+    padding: 20px 0; /* Padding around the CTA buttons */
+}
+/* CTA banner container */
+.cta-container {
+    display: flex;
+    justify-content: space-around; /* Spread buttons evenly across the container */
+    align-items: center;
+    padding: 20px 0;
+    height: 90px;
+}
+
+/* Style for individual CTA buttons */
+.fundingCTA {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgb(105,169,68);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow underneath the button */
+}
+
+.principlesCTA {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgb(207,169,124);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow underneath the button */
+}
+
+.apply-donateCTA {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgb(195,41,58);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow underneath the button */
+}
+
+.apply-donateCTA:hover {
+    background-color: rgb(156, 33, 48); /* Darker shade on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+.principlesCTA:hover {
+    background-color: rgb(255, 166, 81); /* Darker shade on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+.fundingCTA:hover {
+    background-color: rgb(85, 137, 55); /* Darker shade on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional "pop up" effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation class */
+.fade-in {
+    opacity: 0; /* Invisible at the start */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: var(--delay, 0s); /* Default delay, customizable */
+}
+
+
+
+
+/********
+
+content CSS
+
+*********/
+
+/* Info Section */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: #ddd; /* Light gray background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.info-box-second {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: #ddd; /* Light gray background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: black;
+}
+
+/* The container for text */
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.text-overlay {
+    color: rgb(52, 47, 47);
+    padding: 20px;
+    font-size: 18px;
+}
+
+.info-image {
+    width: 50%; /* Image takes up half the width */
+    height: auto;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide elements off-screen */
+.home-content .info-box {
+    opacity: 0;
+    transform: translateY(30px); /* Initial position off-screen */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+/* Apply animation when in view */
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.6s forwards; /* Apply the fade-in effect */
+}
+
+
+
+/********
+
+THIS CODE IS FOR THE RECENT
+ ARTICLES CSS ON THE HOME PAGE
+
+********/
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.divider {
+    border-bottom: 2px solid grey;
+    width: 35%;
+    margin: 10px auto;
+}
+.container {
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+.row {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid grey;
+}
+.image {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.date {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.description {
+    font-size: 14px;
+    color: #333;
+}
+.read-more {
+    color: blue;
+    cursor: pointer;
+}
+
+/* Apply changes at 500px screen width */
+@media (max-width: 500px) {
+    .row {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+    }
+
+    .image img {
+        width: 100%; /* Make the image responsive */
+        max-width: 300px; /* Limit maximum width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .content {
+        width: 100%; /* Ensure text takes full width */
+        padding: 10px 0; /* Add some spacing */
+    }
+    .title {
+        font-size: 12px;
+    }
+    .description {
+        font-size: 10px;
+    }
+}
+
+
+/*******
+
+MEDIA QUERY RESPONSIVENESS
+FOR THE NAVIGATION BAR
+
+*******/
+
+/* Large Laptop (max-width: 1440px) */
+@media (max-width: 1440px) {
+    nav {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-evenly; /* Space items evenly */
+    }
+
+    nav a {
+        font-size: 20px; /* Keep original font size for larger laptops */
+        padding: 10px 20px; /* Keep padding same as original */
+    }
+}
+
+/* Tablet and smaller devices (max-width: 768px) */
+@media (max-width: 1250px) {
+    nav a{
+        font-size: 14px; /* Slightly adjust font size for tablets */
+    }
+
+}
+
+
+
+/********
+FOOTER STYLES
+********/
+
+.footer-container p {
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    display: flex; /* Enables flexbox for the footer */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Ensures text alignment is centered */
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-wrap: wrap;
+    width: 100%; /* Ensures container spans the footer width */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.logo-nav .footer-logo {
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+.logo-nav img {
+    max-width: 150px; /* Set the desired image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.nav-links,
+.donate-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    gap: 20px; /* Add spacing between links */
+    flex-wrap: nowrap;
+}
+
+.nav-links {
+    text-decoration: underline; /* Removes underline */
+}
+
+.nav-links li a,
+.donate-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover,
+.donate-links li a:hover {
+    background-color: #444;
+}
+
+.socials-donate {
+    text-align: center;
+}
+
+.donate-links .btn {
+    font-size: 2rem; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Makes text bolder */
+    text-decoration: none; /* Removes underline */
+    padding: 15px 30px; /* Ensures button doesn't shrink */
+    background-color: rgb(195,41,58);
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 982px) {
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+    }
+    .nav-links,
+    .donate-links {
+        gap: 10px; /* Reduce spacing for smaller screens */
+    }
+
+    .nav-links li a,
+    .donate-links li a {
+        font-size: 16px;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 15px 0;
+    }
+    .socials-donate {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section.logo-nav img {
+        max-width: 400px;
+    }
+}
+@media (max-width: 450px) {
+    .footer-section.logo-nav img {
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 435px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center the links horizontally */
+    }
+
+    .nav-links li {
+        list-style: none; /* Remove bullet points */
+        width: auto; /* No need for full width since they are centered */
+    }
+
+    .nav-links li a {
+        padding: 5px 0; /* Add spacing for better readability */
+    }
+}
