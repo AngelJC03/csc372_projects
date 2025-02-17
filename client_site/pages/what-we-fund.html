@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davis Tennon Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-reboot.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <section class="banner">
         <div class="banner-container">
+            <!-- Burger Menu -->
             <div class="burger">
                 <img src="../images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
                 <div class="burger-menu-content" id="burger-menu-content">
                     <a href="about-viola-and-julius.html">About Viola and Julius</a>
                     <a href="in-the-news.html">In The News</a>
-                    <a href="foundation-staff.html" >Foundation Staff</a>
+                    <a href="foundation-staff.html">Foundation Staff</a>
                     <a href="what-we-fund.html">What We Fund</a>
                     <a href="board-members.html">Board Members</a>
                     <a href="partners.html">Partners/Resources</a>
-                  </div>
+                </div>
             </div>
+            
+            <!-- Logo and Donate Button -->
             <a href="../index.html">
                 <img src="../images/logo-photos/clear-background-dtf-logo.png" alt="Image" width="500" height="155">
             </a>
-            <a href="apply-donate.html" class="btn">Donate Now</a>
         </div>
     </section>
     
@@ -32,43 +37,92 @@
             <div class="orange-container">
             </div>
         </div>
+        
+        <!-- Bootstrap Navbar -->
         <div class="navbar-container">
-            <nav>
-                <a href="about-viola-and-julius.html" class="btn">About Viola and Julius</a>
-                <a href="in-the-news.html">In The News</a>
-                <a href="foundation-staff.html" class="btn">Foundation Staff</a>
-                <a href="what-we-fund.html" class="btn">What We Fund</a>
-                <a href="board-members.html" class="btn">Board Members</a>
-                <a href="partners.html" class="btn">Partners/Resources</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+                <div class="container justify-content-center">
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav d-flex justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="about-viola-and-julius.html">About Viola and Julius</a></li>
+                            <li class="nav-item"><a class="nav-link" href="in-the-news.html">In The News</a></li>
+                            <li class="nav-item"><a class="nav-link" href="foundation-staff.html">Foundation Staff</a></li>
+                            <li class="nav-item"><a class="nav-link" href="what-we-fund.html">What We Fund</a></li>
+                            <li class="nav-item"><a class="nav-link" href="board-members.html">Board Members</a></li>
+                            <li class="nav-item"><a class="nav-link" href="partners.html">Partners/Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
+
+    <div class="WWF-page-title fade-in">
+        <h1> What We Fund </h1>
+    </div>
+
+    <div class="funding-container fade-in">
+        <p>The Davis/Tennon Foundation is committed to driving meaningful change by funding initiatives that address critical needs within Rhode Island communities. Our goal is to empower individuals and families, remove barriers to opportunity, and create lasting solutions for underserved populations.</p>
     
-    <footer>
-        <div class="footer-container">
-            <!-- Left Section: Contact Information -->
-            <div class="footer-section contact-info">
-                <h4>Author Details:</h4>
-                <p> <a href="mailto:">Angel_castano08@uri.edu</a>
-            </div>
-            
-            <!-- Middle Section: Logo and Navigation -->
-            <div class="footer-section logo-nav">
-                <a href="../index.html">
-                    <img src="../images/logo-photos/dtf-logo.png" alt="Image" class="footer-logo">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="in-the-news.html">In The News</a></li>
-                    <li><a href="foundation-staff.html">Foundation Staff</a></li>
-                    <li><a href="what-we-fund.html">What We Fund</a></li>
-                </ul>
-            </div>
-            
-            <!-- Right Section: Donate Button -->
-            <div class="footer-section socials-donate">
-                <ul class="donate-links">
-                    <li><a href="apply-donate.html" class="btn">Donate Today</a></li>
-                </ul>
+        <h2 style="text-align: center;">Our Funding Priorities</h2>
+    
+        <h3>Empowering Women</h3>
+        <p style="font-family: gill-sans-light">We support programs that uplift and empower women through education, leadership training, workforce development, and resources to help them achieve independence and stability.</p>
+    
+        <h3>Preventing Domestic Violence</h3>
+        <p style="font-family: gill-sans-light">We fund initiatives that provide critical resources for survivors, promote prevention education, support intervention efforts, and create safer communities for all.</p>
+    
+        <h3>Student Opportunities Beyond the Classroom</h3>
+        <p style="font-family: gill-sans-light">We are passionate about funding programs that enrich students’ lives outside of school hours, such as after-school programs, mentorship opportunities, and access to the arts and STEM education.</p>
+    
+        <h3>Housing Stability</h3>
+        <p style="font-family: gill-sans-light">We invest in efforts that address housing challenges, including affordable housing projects, emergency shelter programs, and initiatives that combat homelessness in our communities.</p>
+    
+        <h2 style="text-align: center;">What We Look For in Applications</h2>
+        <p style="font-family: gill-sans-light">We prioritize funding for programs and projects that:</p> <br>
+        <ul style="font-family: gill-sans-light">
+            <li>Demonstrate a measurable impact on Rhode Island communities.</li>
+            <li>Foster collaboration and partnerships with local organizations.</li>
+            <li>Focus on underserved or marginalized populations.</li>
+            <li>Align with our core mission and values.</li>
+            <li>Show transparency and accountability in program management and use of funds.</li>
+        </ul>
+    
+        <h2 style="text-align: center;">Apply for Funding</h2>
+        <p style="font-family: gill-sans-light">If your organization shares our vision of building stronger, more equitable communities, we encourage you to apply for funding. Applications are reviewed on a rolling basis, and selected recipients will receive tailored support to help maximize their impact.</p>
+    
+        <h2 style="text-align: center;">Start Your Application:</h2>
+        <p><a href="#">[Insert Application Link]</a></p>
+    
+        <p style="font-family: gill-sans-light">For questions or more information about our funding process, please contact us at <a href="mailto:[Contact Email]">[Contact Email]</a> or call us at [Phone Number].</p>
+    
+        <p class="closing-statement"><strong>Together, we can make a difference.</strong></p>
+    </div> 
+
+    
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+                
+                <!-- Left Section: Contact Info -->
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h5 class="text-uppercase">Author Details:</h5>
+                    <p><a href="mailto:Angel_castano08@uri.edu" class="text-light text-decoration-none">Angel_castano08@uri.edu</a></p>
+                </div>
+    
+                <!-- Middle Section: Logo & Navigation -->
+                <div class="col-lg-4 text-center">
+                    <a href="../index.html">
+                        <img src="../images/logo-photos/dtf-logo.png" alt="DTF Logo" class="footer-logo img-fluid" style="max-width: 120px;">
+                    </a>
+                    <ul class="list-inline mt-2">
+                        <li class="list-inline-item"><a href="in-the-news.html" class="text-light text-decoration-none">In The News</a></li>
+                        <li class="list-inline-item"><a href="foundation-staff.html" class="text-light text-decoration-none">Foundation Staff</a></li>
+                        <li class="list-inline-item"><a href="what-we-fund.html" class="text-light text-decoration-none">What We Fund</a></li>
+                    </ul>
+                </div>
+    
             </div>
         </div>
     </footer>

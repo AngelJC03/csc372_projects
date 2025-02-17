@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davis Tennon Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-reboot.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <section class="banner">
         <div class="banner-container">
+            <!-- Burger Menu -->
             <div class="burger">
                 <img src="../images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
                 <div class="burger-menu-content" id="burger-menu-content">
                     <a href="about-viola-and-julius.html">About Viola and Julius</a>
                     <a href="in-the-news.html">In The News</a>
-                    <a href="foundation-staff.html" >Foundation Staff</a>
+                    <a href="foundation-staff.html">Foundation Staff</a>
                     <a href="what-we-fund.html">What We Fund</a>
                     <a href="board-members.html">Board Members</a>
                     <a href="partners.html">Partners/Resources</a>
-                  </div>
+                </div>
             </div>
+            
+            <!-- Logo and Donate Button -->
             <a href="../index.html">
                 <img src="../images/logo-photos/clear-background-dtf-logo.png" alt="Image" width="500" height="155">
             </a>
-            <a href="apply-donate.html" class="btn">Donate Now</a>
         </div>
     </section>
     
@@ -32,43 +37,94 @@
             <div class="orange-container">
             </div>
         </div>
+        
+        <!-- Bootstrap Navbar -->
         <div class="navbar-container">
-            <nav>
-                <a href="about-viola-and-julius.html" class="btn">About Viola and Julius</a>
-                <a href="in-the-news.html">In The News</a>
-                <a href="foundation-staff.html" class="btn">Foundation Staff</a>
-                <a href="what-we-fund.html" class="btn">What We Fund</a>
-                <a href="board-members.html" class="btn">Board Members</a>
-                <a href="partners.html" class="btn">Partners/Resources</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+                <div class="container justify-content-center">
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav d-flex justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="about-viola-and-julius.html">About Viola and Julius</a></li>
+                            <li class="nav-item"><a class="nav-link" href="in-the-news.html">In The News</a></li>
+                            <li class="nav-item"><a class="nav-link" href="foundation-staff.html">Foundation Staff</a></li>
+                            <li class="nav-item"><a class="nav-link" href="what-we-fund.html">What We Fund</a></li>
+                            <li class="nav-item"><a class="nav-link" href="board-members.html">Board Members</a></li>
+                            <li class="nav-item"><a class="nav-link" href="partners.html">Partners/Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
+
+    <div class="PARTNERS-page-image fade-in">
+        <h1> Resources for Families and Community Partners </h1>
+        <img src="../images/partners-photos/Viola-Davis-Hunger-Is-Moms-Event-e1553904813882-1000x469-1.jpg" alt="Angelo Garcia" class="board-member-photo">
+        <p class="photo-credit" style="font-family: gill-sans-light"><em>Photo by <a href="https://www.eifoundation.org/">EIF (Entertainment Industry Foundation)</a></em></p>
+    </div>
     
-    <footer>
-        <div class="footer-container">
-            <!-- Left Section: Contact Information -->
-            <div class="footer-section contact-info">
-                <h4>Author Details:</h4>
-                <p> <a href="mailto:">Angel_castano08@uri.edu</a>
-            </div>
-            
-            <!-- Middle Section: Logo and Navigation -->
-            <div class="footer-section logo-nav">
-                <a href="../index.html">
-                    <img src="../images/logo-photos/dtf-logo.png" alt="Image" class="footer-logo">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="in-the-news.html">In The News</a></li>
-                    <li><a href="foundation-staff.html">Foundation Staff</a></li>
-                    <li><a href="what-we-fund.html">What We Fund</a></li>
-                </ul>
-            </div>
-            
-            <!-- Right Section: Donate Button -->
-            <div class="footer-section socials-donate">
-                <ul class="donate-links">
-                    <li><a href="apply-donate.html" class="btn">Donate Today</a></li>
-                </ul>
+    <div class="content-container fade-in">
+        <h2 style="text-align: center;">Resources for Families and Community Partners</h2>
+        <p style="font-family: gill-sans-bold">At the Davis/Tennon Foundation, we are dedicated to connecting families with the tools, organizations, and support systems they need to thrive. Below, you’ll find a curated list of resources and partner organizations that address critical needs in our community.</p>
+    
+        <h2>Empowering Women and Preventing Domestic Violence</h2>
+        <ul>
+            <li><a href="https://ricadv.org/" target="_blank">Rhode Island Coalition Against Domestic Violence:</a> Comprehensive support services for survivors, including shelter, advocacy, and prevention programs.</li>
+            <li><a href="https://sojournerri.org/" target="_blank">Sojourner House:</a> Offering housing, counseling, and education to individuals impacted by domestic violence.</li>
+        </ul>
+    
+        <h2>Housing Assistance</h2>
+        <ul>
+            <li><a href="https://rifoundation.org/" target="_blank">Rhode Island Foundation:</a> Initiatives and grants supporting housing stability and community development.</li>
+            <li><a href="https://pocfoundation.com/" target="_blank">Papitto Opportunity Connection:</a> Programs focused on providing housing resources and opportunities for underserved communities.</li>
+        </ul>
+    
+        <h2>Student Enrichment and Education</h2>
+        <ul>
+            <li><a href="https://www.ric.edu/" target="_blank">Rhode Island College:</a> Resources for students and families seeking higher education pathways and enrichment programs.</li>
+            <li><a href="https://www.nld.org/rhode-island-college-workforce-development-hub" target="_blank">Central Falls Workforce Hub:</a> Workforce training and career advancement opportunities for local students and families.</li>
+        </ul>
+    
+        <h2>Financial and Grant Support</h2>
+        <ul>
+            <li><a href="https://champlinfoundation.org/" target="_blank">The Champlin Foundation:</a> Funding opportunities for nonprofit organizations working to enhance community services.</li>
+            <li><a href="https://chartergrowthfund.org/" target="_blank">Trailblazers Initiative by the Charter School Growth Fund:</a> Support for innovative educational programs.</li>
+        </ul>
+    
+        <h2>Parent Advocacy and Leadership</h2>
+        <ul>
+            <li><a href="#">Parent Council Development:</a> Learn about the Davis/Tennon Foundation's initiative to train parents in advocacy and leadership to better identify and address community needs.</li>
+        </ul>
+    
+        <h2>Contact Us for Assistance</h2>
+        <p>If you’re unsure where to start or need help connecting with the right resource, our team is here to assist. Contact us at <a href="mailto:Angelo.Garcia@segueifl.org" class="contact-email">Angelo.Garcia@segueifl.org</a> for guidance and referrals.</p>
+
+        <p><strong>Together, we can eliminate barriers, build connections, and create brighter futures for families across Rhode Island.</strong></p>
+    </div>
+    
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+                
+                <!-- Left Section: Contact Info -->
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h5 class="text-uppercase">Author Details:</h5>
+                    <p><a href="mailto:Angel_castano08@uri.edu" class="text-light text-decoration-none">Angel_castano08@uri.edu</a></p>
+                </div>
+    
+                <!-- Middle Section: Logo & Navigation -->
+                <div class="col-lg-4 text-center">
+                    <a href="../index.html">
+                        <img src="../images/logo-photos/dtf-logo.png" alt="DTF Logo" class="footer-logo img-fluid" style="max-width: 120px;">
+                    </a>
+                    <ul class="list-inline mt-2">
+                        <li class="list-inline-item"><a href="in-the-news.html" class="text-light text-decoration-none">In The News</a></li>
+                        <li class="list-inline-item"><a href="foundation-staff.html" class="text-light text-decoration-none">Foundation Staff</a></li>
+                        <li class="list-inline-item"><a href="what-we-fund.html" class="text-light text-decoration-none">What We Fund</a></li>
+                    </ul>
+                </div>
+    
             </div>
         </div>
     </footer>
