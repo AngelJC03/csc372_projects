@@ -985,6 +985,13 @@ VIOLA STORY PAGE CSS
         }
     }
 
+    #violas-story-caption{
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
     #viola-page-container {
         display: flex;
         align-items: flex-start;
@@ -1007,52 +1014,7 @@ VIOLA STORY PAGE CSS
     .text-content {
         width: 100%;
     }
-    .toggle-bar {
-        display: none; /* Hidden initially */
-        cursor: pointer;
-        background-color: #ddd;
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-        border: 1px solid #aaa;
-        margin-top: 10px;
-    }
 
-     /* Tablet: Stack image on top */
-    @media (max-width: 768px) {
-        #viola-page-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        #viola-page-container img {
-            float: none; /* Removes floating on smaller screens */
-            margin-right: 0;
-            margin-bottom: 20px;
-        }
-
-        .text-content {
-            text-align: center;
-        }
-    }
-
-    /* Mobile: Center everything */
-    @media (max-width: 600px) {
-        #extra-content {
-            display: none;
-        }
-        #viola-page-container {
-            padding: 10px;
-        }
-
-        #viola-page-container img {
-            max-width: 100%;
-        }
-        .toggle-bar {
-            display: block; /* Show the button */
-        }
-    }
     .slideshow-container {
         position: relative;
         width: 80%;
@@ -1118,6 +1080,54 @@ VIOLA STORY PAGE CSS
     @media (max-width: 375px) {
         .dots-container {
             bottom: 8%;
+        }
+    }
+
+    .toggle-bar {
+        display: none; /* Hidden initially */
+        cursor: pointer;
+        background-color: #ddd;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #aaa;
+        margin-top: 10px;
+    }
+
+     /* Tablet: Stack image on top */
+    @media (max-width: 768px) {
+        #viola-page-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #viola-page-container img {
+            float: none; /* Removes floating on smaller screens */
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .text-content {
+            text-align: center;
+        }
+        
+    }
+
+    /* Mobile: Center everything */
+    @media (max-width: 600px) {
+        #extra-content {
+            display: none;
+        }
+        #viola-page-container {
+            padding: 10px;
+        }
+
+        #viola-page-container img {
+            max-width: 100%;
+        }
+        .toggle-bar {
+            display: block; /* Show the button */
         }
     }
 
@@ -1289,7 +1299,7 @@ CSS FOR FOUNDATION STAFF PAGE
     text-align: center;
 }
 
-.text-content {
+.text-content-staff-page {
     font-size: 18px; /* Smaller font size for captions */
     font-family: "gill-sans-light";
     text-align: center;
@@ -1307,7 +1317,7 @@ CSS FOR FOUNDATION STAFF PAGE
     flex: 1; /* Allow caption to take remaining space */
 }
 
-.toggle-bar {
+.toggle-bar-foundation-staff {
     display: none;
     cursor: pointer;
     background-color: #ddd;
@@ -1333,10 +1343,10 @@ CSS FOR FOUNDATION STAFF PAGE
 
 
 @media (max-width: 768px) {
-    .toggle-bar {
+    .toggle-bar-foundation-staff {
         display: block; /* Ensure toggle bar is displayed on screens smaller than 475px */
     }
-    .text-content {
+    .text-content-staff-page {
         display: none; /* Ensure text is hidden on screens smaller than 475px */
     }
 }

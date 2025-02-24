@@ -14,7 +14,7 @@
         <div class="banner-container">
             <!-- Burger Menu -->
             <div class="burger">
-                <img src="../images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
+                <img src="../images/menu.png" alt="Menu" class="menu-icon">
                 <div class="burger-menu-content" id="burger-menu-content">
                     <a href="about-viola-and-julius.html">About Viola and Julius</a>
                     <a href="in-the-news.html">In The News</a>
@@ -57,6 +57,35 @@
             </nav>
         </div>
     </header>
+
+    <script>
+        $(document).ready(function() {
+            // Burger Menu Toggle
+            $(".burger img").click(function(event) {
+                var menu = $("#burger-menu-content");
+                
+                // Toggle the menu visibility
+                if (menu.is(":visible")) {
+                    menu.hide(); // Hide the menu if it's already visible
+                } else {
+                    menu.show(); // Show the menu if it's hidden
+                }
+        
+                event.stopPropagation(); // Prevent event from bubbling up and triggering the document click
+            });
+        
+            // Close the burger menu when clicking outside of it
+            $(document).click(function(event) {
+                var menu = $("#burger-menu-content");
+                var burger = $(".burger"); // Burger icon (menu button)
+        
+                // Check if the click was outside the menu or burger icon
+                if (!burger.is(event.target) && !burger.has(event.target).length && !menu.is(event.target) && !menu.has(event.target).length) {
+                    menu.hide(); // Hide the menu if clicked outside
+                }
+            });
+        });
+    </script>
     
     <footer class="bg-dark text-light py-4">
         <div class="container">
