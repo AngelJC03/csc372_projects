@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/loadJSON.js" defer></script> 
 </head>
 <body>
     <section class="banner">
@@ -17,7 +18,7 @@
             <!-- Burger Menu -->
             <div class="burger">
                 <img src="../images/menu.png" alt="Menu" class="menu-icon">
-                <div class="burger-menu-content" id="burger-menu-content">
+                <div class="burger-menu-content" id="burger-menu-content" style="display: none;">
                     <a href="about-viola-and-julius.html">About Viola and Julius</a>
                     <a href="in-the-news.html">In The News</a>
                     <a href="foundation-staff.html">Foundation Staff</a>
@@ -65,28 +66,29 @@
             // Burger Menu Toggle
             $(".burger img").click(function(event) {
                 var menu = $("#burger-menu-content");
-                
-                // Toggle the menu visibility
-                if (menu.is(":visible")) {
-                    menu.hide(); // Hide the menu if it's already visible
-                } else {
-                    menu.show(); // Show the menu if it's hidden
-                }
         
-                event.stopPropagation(); // Prevent event from bubbling up and triggering the document click
+                menu.fadeToggle(200); // Smoothly show/hide the menu
+        
+                event.stopPropagation(); // Prevent click from bubbling to document
             });
         
-            // Close the burger menu when clicking outside of it
+            // Prevent menu from closing when clicking inside it
+            $("#burger-menu-content").click(function(event) {
+                event.stopPropagation(); // Stops the document click from closing it
+            });
+        
+            // Close menu when clicking outside
             $(document).click(function(event) {
                 var menu = $("#burger-menu-content");
-                var burger = $(".burger"); // Burger icon (menu button)
+                var burger = $(".burger");
         
-                // Check if the click was outside the menu or burger icon
                 if (!burger.is(event.target) && !burger.has(event.target).length && !menu.is(event.target) && !menu.has(event.target).length) {
-                    menu.hide(); // Hide the menu if clicked outside
+                    menu.fadeOut(200);
                 }
             });
         });
+        
+        
     </script>
 
     <div class="title-of-page fade-in"> Foundation Staff </div>
@@ -104,68 +106,28 @@
         <div class="staff-member">
             <img src="../images/staff-photos/Angelo-Garcia.webp" alt="Angelo Garcia" class="staff-photo">
             <div class="staff-caption">
-                <h3>Angelo Garcia</h3>
-                <p>Chair of the Davis/Tennon Foundation</p>
-                <div class="toggle-bar-foundation-staff">Click to View More</div>
-                <h1 class="text-content-staff-page">Angelo Garcia is the Founder and Executive
-                    Director of the Segue Institute for Learning, a 
-                    public charter school in Central Falls, Rhode Island,
-                     focused on providing high-quality education to underserved
-                      communities. He also serves as Chair of the Davis/Tennon Foundation,
-                       which empowers local communities in Rhode Island. Garcia's commitment 
-                       to education is demonstrated through initiatives like the planned opening
-                        of Legacy High School to train future educators.
+                <h1 class="text-content-staff-page">
                     </h1>
             </div>
         </div>
         <div class="staff-member">
-            <img src="../images/staff-photos/jenny-sousa.jpg" alt="Jenny Sousa" class="staff-photo">
+            <img src="../images/staff-photos/jennie-sousa.webp" alt="Jenny Sousa" class="staff-photo">
             <div class="staff-caption">
-                <h3>Jennie Sousa</h3>
-                <p>Administrative Support Specialist</p>
-                <div class="toggle-bar-foundation-staff">Click to View More</div>
                 <h1 class="text-content-staff-page">
-                    Jennie Sousa, born and raised in Central Falls, graduated from Central Falls
-                     High School in 2003 and pursued her passion for travel by training as a flight 
-                     attendant with Delta Airlines. Of Portuguese heritage, her parents are from São Miguel,
-                      Azores, where she spent memorable summers with her brother. She now shares
-                       those experiences with her husband, also from the Azores, and their two sons:
-                        Christian, a film student and Segue alum, and Julian, who completes their
-                         family. Jennie worked 19 years at The Children’s Workshop, progressing from
-                          Teen Aid to School Director, before joining Segue in 2023. As Admissions
-                           Coordinator/Administrative Assistant, she loves supporting families, staff,
-                            and students, continuing her lifelong commitment to the Central Falls community.
                 </h1>
             </div>
         </div>
         <div class="staff-member">
-            <img src="../images/staff-photos/jennifer-tc.JPEG" alt="Jennifer Toone Corrigan" class="staff-photo">
+            <img src="../images/staff-photos/jeniffer-corrigan.webp" alt="Jennifer Toone Corrigan" class="staff-photo">
             <div class="staff-caption">
-                <h3>Jennifer Toone Corrigan</h3>
-                <p>Public Relations Specialist</p>
-                <div class="toggle-bar-foundation-staff">Click to View More</div>
                 <h1 class="text-content-staff-page">
-                    Jennifer Toone Corrigan is the founder and principal of In Toone Communication, 
-                    a 100% women-owned public relations and marketing firm based in Providence, Rhode 
-                    Island and established in 2004. Jennifer has been a long-time supporter of the Segue
-                     Institute for Learning, contributing to its press efforts and helping showcase community-driven 
-                     initiatives in Rhode Island.
                 </h1>
             </div>
         </div>
         <div class="staff-member">
-            <img src="../images/staff-photos/angel-castano-photo.png" alt="Angel Castano" class="staff-photo">
+            <img src="../images/staff-photos/angel-castano.webp" alt="Angel Castano" class="staff-photo">
             <div class="staff-caption">
-                <h3>Angel Castano</h3>
-                <p>Technical Solutions Specialist</p>
-                <div class="toggle-bar-foundation-staff">Click to View More</div>
                 <h1 class="text-content-staff-page">
-                    Angel Castano is a Software Engineer based in 
-                    Central Falls, Rhode Island, and a Hack Diversity
-                    Fellow. As a fellow, he is dedicated to advocating 
-                    for underserved communities, including Central Falls,
-                    with a focus on fostering representation and opportunities 
-                    in the tech industry.
                 </h1>
             </div>
         </div>

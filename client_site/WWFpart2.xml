@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<funding>
+    <introduction>
+        <description>The Davis/Tennon Foundation is committed to driving meaningful change by funding initiatives that address critical needs within Rhode Island communities. Our goal is to empower individuals and families, remove barriers to opportunity, and create lasting solutions for underserved populations.</description>
+    </introduction>
+
+    <priorities>
+        <priority>
+            <name>Empowering Women</name>
+            <description>We support programs that uplift and empower women through education, leadership training, workforce development, and resources to help them achieve independence and stability.</description>
+        </priority>
+        <priority>
+            <name>Preventing Domestic Violence</name>
+            <description>We fund initiatives that provide critical resources for survivors, promote prevention education, support intervention efforts, and create safer communities for all.</description>
+        </priority>
+        <priority>
+            <name>Student Opportunities Beyond the Classroom</name>
+            <description>We are passionate about funding programs that enrich students’ lives outside of school hours, such as after-school programs, mentorship opportunities, and access to the arts and STEM education.</description>
+        </priority>
+        <priority>
+            <name>Housing Stability</name>
+            <description>We invest in efforts that address housing challenges, including affordable housing projects, emergency shelter programs, and initiatives that combat homelessness in our communities.</description>
+        </priority>
+    </priorities>
+</funding>

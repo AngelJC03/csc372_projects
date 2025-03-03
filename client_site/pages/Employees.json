@@ -1,0 +1,22 @@
+[
+    {
+        "employee-name": "Angelo Garcia",
+        "employee-desc": "Angelo Garcia is the Founder and Executive Director of the Segue Institute for Learning, a public charter school in Central Falls, Rhode Island, focused on providing high-quality education to underserved communities. He also serves as Chair of the Davis/Tennon Foundation, which empowers local communities in Rhode Island. Garcia's commitment to education is demonstrated through initiatives like the planned opening of Legacy High School to train future educators.",
+        "occupation": "Chair of the Davis/Tennon Foundation"
+    },
+    {
+        "employee-name": "Jennie Sousa",
+        "employee-desc": "Jennie Sousa, born and raised in Central Falls, graduated from Central Falls High School in 2003 and pursued her passion for travel by training as a flight attendant with Delta Airlines. Of Portuguese heritage, her parents are from São Miguel, Azores, where she spent memorable summers with her brother. She now shares those experiences with her husband, also from the Azores, and their two sons: Christian, a film student and Segue alum, and Julian, who completes their family. Jennie worked 19 years at The Children’s Workshop, progressing from Teen Aid to School Director, before joining Segue in 2023. As Admissions Coordinator/Administrative Assistant, she loves supporting families, staff, and students, continuing her lifelong commitment to the Central Falls community.",
+        "occupation": "Administrative Support Specialist"
+    },
+    {
+        "employee-name": "Jeniffer Corrigan",
+        "employee-desc": "Jennifer Toone Corrigan is the founder and principal of In Toone Communication, a 100% women-owned public relations and marketing firm based in Providence, Rhode Island and established in 2004. Jennifer has been a long-time supporter of the Segue Institute for Learning, contributing to its press efforts and helping showcase community-driven initiatives in Rhode Island.",
+        "occupation": "Public Relations Specialist"
+    },
+    {
+        "employee-name": "Angel Castano",
+        "employee-desc": "Angel Castano is a Software Engineer based in Central Falls, Rhode Island, and a Hack Diversity Fellow. As a fellow, he is dedicated to advocating for underserved communities, including Central Falls, with a focus on fostering representation and opportunities in the tech industry.",
+        "occupation": "Technical Solutions Specialist"
+    }
+]
