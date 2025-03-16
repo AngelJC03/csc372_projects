@@ -1316,41 +1316,6 @@ CSS FOR FOUNDATION STAFF PAGE
 .staff-caption {
     flex: 1; /* Allow caption to take remaining space */
 }
-
-.toggle-bar-foundation-staff {
-    display: none;
-    cursor: pointer;
-    background-color: #ddd;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #aaa;
-    width: 100%;
-}
-
-@media (max-width: 900px) {
-    .text-content {
-        display: block; /* Ensure text is hidden on screens smaller than 768px */
-    }
-    .staff-member {
-        width: 100%; /* Full width for each member */
-    }
-
-    .staff-photo {
-        height: auto; /* Auto height for photos */
-        margin-right: 0; /* Remove space between photo and caption */
-    }
-}
-
-
-@media (max-width: 768px) {
-    .toggle-bar-foundation-staff {
-        display: block; /* Ensure toggle bar is displayed on screens smaller than 475px */
-    }
-    .text-content-staff-page {
-        display: none; /* Ensure text is hidden on screens smaller than 475px */
-    }
-}
-
 /************
 WHAT WE FUND PAGE CSS
 ************/
