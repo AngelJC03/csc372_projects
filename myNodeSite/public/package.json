@@ -1,0 +1,18 @@
+{
+  "name": "csc372_projects",
+  "version": "1.0.0",
+  "description": "handle bars site of viola davis tennon foundation",
+  "main": "handlebarsServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "angel castano",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^8.0.1"
+  }, 
+  "engines": {
+     "node": ">=v16"
+   }
+
+}
