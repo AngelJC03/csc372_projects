@@ -21,7 +21,7 @@
                 <div class="burger-menu-content" id="burger-menu-content" style="display: none;">
                     <a href="about-viola-and-julius.html">About Viola and Julius</a>
                     <a href="in-the-news.html">In The News</a>
-                    <a href="foundation-staff.html">Foundation Staff</a>
+                    <a href="foundation-staff.php">Foundation Staff</a>
                     <a href="what-we-fund.html">What We Fund</a>
                     <a href="board-members.html">Board Members</a>
                     <a href="partners.html">Partners/Resources</a>
@@ -50,7 +50,7 @@
                         <ul class="navbar-nav d-flex justify-content-center">
                             <li class="nav-item"><a class="nav-link" href="about-viola-and-julius.html">About Viola and Julius</a></li>
                             <li class="nav-item"><a class="nav-link" href="in-the-news.html">In The News</a></li>
-                            <li class="nav-item"><a class="nav-link" href="foundation-staff.html">Foundation Staff</a></li>
+                            <li class="nav-item"><a class="nav-link" href="foundation-staff.php">Foundation Staff</a></li>
                             <li class="nav-item"><a class="nav-link" href="what-we-fund.html">What We Fund</a></li>
                             <li class="nav-item"><a class="nav-link" href="board-members.html">Board Members</a></li>
                             <li class="nav-item"><a class="nav-link" href="partners.html">Partners/Resources</a></li>
@@ -103,36 +103,27 @@
     </style>
 
     <div class="staff-container fade-in">
-        <div class="staff-member">
-            <img src="../images/staff-photos/Angelo-Garcia.webp" alt="Angelo Garcia" class="staff-photo">
-            <div class="staff-caption">
-                <h1 class="text-content-staff-page">
-                    </h1>
-            </div>
-        </div>
-        <div class="staff-member">
-            <img src="../images/staff-photos/jennie-sousa.webp" alt="Jenny Sousa" class="staff-photo">
-            <div class="staff-caption">
-                <h1 class="text-content-staff-page">
-                </h1>
-            </div>
-        </div>
-        <div class="staff-member">
-            <img src="../images/staff-photos/jeniffer-corrigan.webp" alt="Jennifer Toone Corrigan" class="staff-photo">
-            <div class="staff-caption">
-                <h1 class="text-content-staff-page">
-                </h1>
-            </div>
-        </div>
-        <div class="staff-member">
-            <img src="../images/staff-photos/angel-castano.webp" alt="Angel Castano" class="staff-photo">
-            <div class="staff-caption">
-                <h1 class="text-content-staff-page">
-                </h1>
-            </div>
-        </div>
-    </div>
+        <?php
+        $imageNames = [
+            "Angelo Garcia" => "Angelo-Garcia.webp",
+            "Jennie Sousa" => "jennie-sousa.webp",
+            "Jeniffer Corrigan" => "jeniffer-corrigan.webp",
+            "Angel Castano" => "angel-castano.webp"
+        ];
 
+        foreach ($employees as $employee): 
+            $imgFile = $imageNames[$employee->name] ?? 'default.png';
+        ?>
+            <div class="staff-member">
+                <img src="../images/staff-photos/<?php echo $imgFile; ?>" alt="<?php echo $employee->name; ?>" class="staff-photo">
+                <div class="staff-caption">
+                    <h1 class="text-content-staff-page"><?php echo $employee->name; ?></h1>
+                    <h3><?php echo $employee->occupation; ?></h3>
+                    <p><?php echo $employee->description; ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
     
     <footer class="bg-dark text-light py-4">
         <div class="container">
@@ -151,7 +142,7 @@
                     </a>
                     <ul class="list-inline mt-2">
                         <li class="list-inline-item"><a href="in-the-news.html" class="text-light text-decoration-none">In The News</a></li>
-                        <li class="list-inline-item"><a href="foundation-staff.html" class="text-light text-decoration-none">Foundation Staff</a></li>
+                        <li class="list-inline-item"><a href="foundation-staff.php" class="text-light text-decoration-none">Foundation Staff</a></li>
                         <li class="list-inline-item"><a href="what-we-fund.html" class="text-light text-decoration-none">What We Fund</a></li>
                     </ul>
                 </div>
