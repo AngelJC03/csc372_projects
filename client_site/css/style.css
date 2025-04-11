@@ -207,9 +207,16 @@ nav a:hover {
     left: 0;
     z-index: 0; /* Make sure it's above other elements */
 }
-
-
+.hidden-link {
+    display: none;
+}
 @media (max-width: 1000px) {
+    .banner-container .btn {
+        display: none; /* Hide the button on smaller screens */
+    }
+    .burger-menu-content .hidden-link {
+        display: block;
+    }    
     .hero h1 {
         font-size: 24px; /* Adjust font size */
         left: 10%;
@@ -271,6 +278,10 @@ nav a:hover {
     }
     .banner-container .btn {
         z-index: 0;
+        display: none;
+    }
+    .banner-container h1 {
+        display: none;
     }
     .banner-container {
         flex-direction: column; /* Stack elements vertically */
