@@ -12,6 +12,24 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+    <script>
+        // Function to get a cookie value by name
+        function getCookie(name) {
+          let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+          if (match) return match[2];
+          return null;
+        }
+    
+        window.onload = function() {
+          // Check if the 'userName' cookie is set
+          var userName = getCookie('userName');
+          if (userName) {
+            document.getElementById('welcomeMessage').textContent = 'Welcome, ' + userName + '!';
+          } else {
+            document.getElementById('welcomeMessage').textContent = 'Welcome, Guest!';
+          }
+        };
+    </script>
     <section class="banner">
         <div class="banner-container">
             <!-- Burger Menu -->
@@ -24,6 +42,7 @@
                     <a href="pages/what-we-fund.html">What We Fund</a>
                     <a href="pages/board-members.html">Board Members</a>
                     <a href="pages/partners.html">Partners/Resources</a>
+                    <a href="pages/htmlform.html" class="hidden-link">Apply For Funding</a>
                 </div>
             </div>
             
@@ -31,6 +50,8 @@
             <a href="index.html">
                 <img src="images/logo-photos/clear-background-dtf-logo.png" alt="Image" width="500" height="155">
             </a>
+            <a href="pages/htmlform.html" class="btn">Apply For Funding</a>
+            <h1 id="welcomeMessage" style="position: absolute; top: 20px; right: 100px;">Loading...</h1>
         </div>
     </section>
     

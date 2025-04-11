@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="process-form.php" method="POST">
+    <h2 style="text-align: center;">Apply for Funding</h2>
+
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="phone">Phone Number</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="phone" 
+      required 
+      pattern="[0-9]{10}" 
+      title="Please enter a 10-digit phone number (numbers only)"
+    >
+
+    <label for="color">Favorite Color</label>
+    <select id="color" name="color" required>
+      <option value="">-- Select a color --</option>
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+      <option value="yellow">Yellow</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
